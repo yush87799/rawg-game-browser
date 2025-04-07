@@ -1,0 +1,26 @@
+.home-page {
+  max-width: 100%;
+  padding: 0;
+  display: flex;
+  flex: 1;
+}
+
+.home-page .row {
+  width: 100%;
+  margin: 0;
+}
+
+.sidebar-column, 
+.main-content-column {
+  padding: 0;
+}
+
+@media (max-width: 768px) {
+  .sidebar-column {
+    order: 1;
+  }
+  
+  .main-content-column {
+    order: 2;
+  }
+}

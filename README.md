@@ -1,70 +1,144 @@
-# Getting Started with Create React App
+# 🎮 RAWG Game Browser
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A fully responsive front-end React application built using Create React App that fetches and displays game data using the RAWG Video Games Database API. It features user authentication, filtering, bookmarking, and a game detail page – all styled using Bootstrap and React-Bootstrap. 
 
-## Available Scripts
+This project is part of a front-end challenge to demonstrate skills in component design, API integration, state management, and user authentication.
 
-In the project directory, you can run:
+---
+
+## 🚀 Features
+
+- 🔍 Live Search with real-time suggestions
+- 🎮 Game Cards with image, title, tags, genre, ratings
+- 🧭 Sidebar Filters (genre, tags, year, popularity)
+- 📄 Detailed Game Page (screenshots, description, system requirements, etc.)
+- 🔐 Clerk Authentication (Sign up, Log in, Log out)
+- 📚 Bookmark/Favorite Games (only accessible when logged in)
+- 🌐 Responsive Design using Bootstrap + React-Bootstrap
+- 📦 Redux for state management
+- 📄 Pagination to load more games
+
+---
+
+## 📁 Folder Structure
+
+```
+src/
+├── assets/               # Images and static assets
+├── components/           # Reusable UI components
+├── pages/                # Page-level components (Home, GameDetails, Library)
+├── redux/                # Redux store, slices, actions
+├── utils/                # Helper functions and constants
+├── App.js                # Main app entry with routes
+├── index.js              # React DOM render with Redux and Clerk setup
+└── ...other CRA files
+```
+
+---
+
+## 🧩 Tech Stack
+
+- **React (CRA)** – UI Framework
+- **React-Bootstrap** – Styling components
+- **Bootstrap 5** – Responsive layout & design
+- **Redux & @reduxjs/toolkit** – State management
+- **Axios** – API calls
+- **React Router DOM** – Page routing
+- **Clerk** – User authentication system
+
+---
+
+## 🛠️ Installation
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/your-username/rawg-game-browser.git
+cd rawg-game-browser
+```
+
+### 2. Install Dependencies
+
+```bash
+npm install
+```
+
+### 3. Create a `.env` file
+
+Create a `.env` file in the root directory and add the following keys:
+
+```
+REACT_APP_RAWG_API_KEY=your_rawg_api_key_here
+REACT_APP_CLERK_PUBLISHABLE_KEY=your_clerk_publishable_key_here
+```
+
+Replace with your actual keys. **Do not expose `.env` in public repositories.**
+
+---
+
+## 🧪 Available Scripts
+
+In the project directory, run:
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Runs the app in development mode. Open [http://localhost:3000](http://localhost:3000).
 
 ### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Launches the test runner.
 
 ### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Builds the app for production.
 
 ### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+**Note: this is irreversible.** Copies config to allow full customization.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 🔐 Authentication
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Implemented via [Clerk](https://clerk.dev)
+- Routes like `/library` are protected and require login
+- Users can sign up and log in using Clerk's hosted components
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 📚 Bookmarks
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Logged-in users can bookmark games (saved in Redux)
+- Bookmark state persists using `localStorage`
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 📌 API Used
 
-### Analyzing the Bundle Size
+- **RAWG Video Games Database API**: https://rawg.io/apidocs
+  - Used for fetching game listings, screenshots, tags, and details.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+## 🧠 Future Enhancements
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- Dark/Light Mode Toggle
+- Sorting Options (Rating, Release Date)
+- User Profile Pages
+- Lazy Loading for Images
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 🤝 Contributing
 
-### Deployment
+1. Fork this repo
+2. Create a new branch: `git checkout -b my-feature`
+3. Make your changes and commit: `git commit -m 'add feature'`
+4. Push to branch: `git push origin my-feature`
+5. Open a Pull Request
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+---
 
-### `npm run build` fails to minify
+## 📄 License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+MIT © Pratyush Shrivastava

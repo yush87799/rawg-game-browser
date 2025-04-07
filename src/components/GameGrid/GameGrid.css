@@ -1,0 +1,31 @@
+.game-grid-container {
+  padding: 1rem;
+  width: 100%;
+}
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 300px;
+  width: 100%;
+}
+
+.no-results {
+  text-align: center;
+  padding: 3rem;
+  color: #aaa;
+}
+
+.results-info {
+  margin-bottom: 1.5rem;
+}
+
+.results-info h4 {
+  margin-bottom: 0.5rem;
+}
+
+.results-info p {
+  color: #aaa;
+  margin: 0;
+}
