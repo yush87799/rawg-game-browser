@@ -1,3 +1,5 @@
+🔗 [Live Demo for MediaAmp](https://mediumslateblue-mandrill-355504.hostingersite.com/)
+
 # 🎮 RAWG Game Browser
 
 A fully responsive front-end React application built using Create React App that fetches and displays game data using the RAWG Video Games Database API. It features user authentication, filtering, bookmarking, and a game detail page – all styled using Bootstrap and React-Bootstrap. 
