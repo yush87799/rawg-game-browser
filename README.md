@@ -1,4 +1,4 @@
-🔗 [Live Demo for MediaAmp](https://mediumslateblue-mandrill-355504.hostingersite.com/)
+🔗 [Live Demo](https://mediumslateblue-mandrill-355504.hostingersite.com/)
 
 # 🎮 RAWG Game Browser
 
